@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_backroung2" >
+
+    <LinearLayout
+        android:id="@+id/top_vbanner"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/top_banner2"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/top_vbanner"
+        android:scrollbars="vertical">
+
+        <HorizontalScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TableLayout
+                android:id="@+id/table_allTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:stretchColumns="1" >
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+</RelativeLayout>

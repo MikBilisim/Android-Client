@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" 
+        android:onClick="showDetails">
+
+        <TextView
+            android:id="@+id/txt_wrstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="7dp"
+            android:focusable="false"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <EditText
+                android:id="@+id/etAmountTrans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.89"
+                android:digits="0123456789."
+                android:hint="amount kg"
+                android:inputType="numberDecimal"
+                android:maxLength="9"
+                android:singleLine="true" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/plusBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/plus_btn"
+                android:focusable="false"
+                android:gravity="center"
+                android:onClick="plusItem" />
+
+            <Button
+                android:id="@+id/minusBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/minus_btn"
+                android:focusable="false"
+                android:gravity="center"
+                android:onClick="minusItem" />
+            
+            <Button
+                android:id="@+id/minusBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/delete_btn"
+                android:focusable="false"
+                android:gravity="center"
+                android:onClick="deleteItem" />
+            
+            
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
